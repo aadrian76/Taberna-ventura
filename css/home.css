@@ -1,0 +1,75 @@
+/* ===== Página de inicio ===== */
+:root{--abyss-curve:170px}
+.page,.descent{position:relative}
+.container{margin-left:36px;margin-right:16px;position:relative;z-index:2}
+@media(min-width:700px){.container{width:min(1080px,100% - 112px);margin-left:auto;margin-right:auto}}
+.kicker{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 10px}
+.section{padding:76px 0;position:relative}
+.section h2{font-size:clamp(1.9rem,6.5vw,3rem);margin-bottom:14px}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* Cadena del ancla (recta); el tramo curvo final está en el SVG del fondo */
+.chain-track{position:absolute;z-index:1;top:0;bottom:0;left:4%;width:16px;transform:translateX(-50%);
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='56' viewBox='0 0 16 56'%3E%3Cellipse cx='8' cy='14' rx='5.4' ry='13' fill='none' stroke='%23c9d9df' stroke-width='3'/%3E%3Crect x='6' y='22' width='4' height='40' rx='2' fill='%2398b3be'/%3E%3Crect x='6' y='-34' width='4' height='40' rx='2' fill='%2398b3be'/%3E%3C/svg%3E") repeat-y top center;
+  opacity:.8;clip-path:inset(0 0 var(--clip,0px) 0);filter:drop-shadow(0 0 4px rgba(6,29,53,.5))}
+
+/* ---------- Hero: superficie ---------- */
+.hero{--sky:clamp(300px,42svh,420px);position:relative;min-height:100svh;padding-bottom:64px}
+.hero__sky{position:absolute;top:0;left:0;right:0;height:var(--sky);background:radial-gradient(ellipse 60% 70% at 78% 8%,rgba(255,246,224,.85),transparent 62%),linear-gradient(#dfeef0,#b3d6d8)}
+.waves{position:absolute;left:0;right:0;top:calc(var(--sky) - 2px);height:36px;overflow:hidden}
+.waves i{position:absolute;inset:0;display:block;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='36' viewBox='0 0 300 36'%3E%3Cpath d='M0 16Q75 36 150 16T300 16V0H0Z'/%3E%3C/svg%3E") 0 0/300px 36px repeat-x;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='36' viewBox='0 0 300 36'%3E%3Cpath d='M0 16Q75 36 150 16T300 16V0H0Z'/%3E%3C/svg%3E") 0 0/300px 36px repeat-x;
+  animation:wave 16s linear infinite}
+.waves i:nth-child(1){background:#b3d6d8}
+.waves i:nth-child(2){top:7px;background:rgba(243,248,250,.5);animation-duration:24s;animation-direction:reverse}
+.waves i:nth-child(3){top:16px;background:rgba(95,180,180,.4);animation-duration:34s}
+@keyframes wave{to{-webkit-mask-position:300px 0;mask-position:300px 0}}
+.hero__top{padding-top:calc(var(--hdr) + 26px);height:var(--sky);display:flex;flex-direction:column;justify-content:center;color:var(--navy)}
+.hero__top .kicker{color:#1d5f73}
+.hero h1{font-size:clamp(2.7rem,13.5vw,6rem);letter-spacing:.01em;color:var(--navy);text-shadow:0 2px 0 rgba(255,255,255,.5)}
+.hero__water{padding-top:54px}
+.hero__water .btn{min-width:170px}
+.hero__lema{font-family:var(--serif);font-size:clamp(1.25rem,5.2vw,2rem);line-height:1.3;margin:0 0 26px;max-width:22ch;text-shadow:0 2px 12px rgba(3,15,29,.45)}
+
+/* ---------- Restaurante ---------- */
+.about p{margin:0 0 12px;font-size:1.05rem;max-width:56ch}
+.about #about-text p:last-child{margin:0}
+.textlink{display:inline-block;padding:10px 0;color:var(--foam);text-decoration:none;border-bottom:1px solid rgba(238,244,245,.5)}
+.textlink:hover{border-bottom-color:var(--gold)}
+
+/* ---------- Plato: fotografía directamente sobre el fondo ---------- */
+.dish{display:grid;gap:22px;align-items:end}
+.dish__img{margin:0}
+.dish__img .zoomable{width:100%}
+.dish__img img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.dish__txt h2{margin-bottom:10px}
+.dish__txt p{margin:0 0 10px}
+@media(min-width:900px){.dish{grid-template-columns:.9fr 1.1fr;gap:56px}.dish__img img{aspect-ratio:4/5;max-height:720px}}
+
+/* ---------- Contacto ---------- */
+.contact{display:grid;gap:34px;margin-top:8px}
+.contact h3{font:600 .72rem var(--font);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+.contact .actions{display:flex;flex-wrap:wrap;gap:10px}
+.contact .tel{margin:0 0 14px;font:700 1.5rem var(--serif)}
+.hours{list-style:none;margin:0;padding:0;max-width:340px}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid rgba(238,244,245,.16);font-variant-numeric:tabular-nums}
+.hours li:last-child{border-bottom:1px solid rgba(238,244,245,.16)}
+.hours li.today{font-weight:700}
+.hours li.today span:first-child::after{content:" · hoy";font-weight:400;opacity:.7}
+@media(min-width:760px){.contact{grid-template-columns:1fr 1fr;gap:56px}}
+
+/* ---------- Fondo marino y cierre ---------- */
+
+.abyss{position:relative;padding-top:var(--abyss-curve,170px);padding-bottom:150px;text-align:center;overflow:hidden}
+.abyss__curve{position:absolute;top:0;left:0;width:100%;height:var(--abyss-curve,170px);z-index:1;overflow:visible}
+.abyss__curve path{fill:none;vector-effect:non-scaling-stroke;stroke-linecap:round}
+.medal{position:relative;z-index:2;width:136px;margin:0 auto 14px}
+.medal img{width:136px;height:136px;border-radius:50%;box-shadow:0 0 0 2px rgba(217,188,120,.7)}
+.medal .shackle{position:absolute;top:-16px;left:50%;width:26px;height:26px;transform:translateX(-50%)}
+.foot{position:relative;z-index:2}
+.foot p{margin:0 0 4px;font-family:var(--serif);font-size:1.3rem}
+.foot small{display:block;margin-top:14px;opacity:.6}
+.seabed{position:absolute;left:0;bottom:0;width:100%;height:190px;z-index:1}
+@media(min-width:700px){:root{--abyss-curve:210px}.medal,.medal img{width:160px;height:160px}.seabed{height:260px}}

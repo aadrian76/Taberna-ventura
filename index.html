@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taberna Ventura</title>
+<meta name="description" content="Taberna Ventura: cocina de taberna para compartir, con el mar de fondo. Descubre nuestra carta.">
+<meta name="theme-color" content="#154a62">
+<meta property="og:title" content="Taberna Ventura">
+<meta property="og:description" content="Cocina de taberna para compartir, con el mar de fondo.">
+<meta property="og:image" content="img/plato-ensalada-tomate-burrata.jpg">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/sea.css">
+<link rel="stylesheet" href="css/home.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#restaurante">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="site-header__in">
+    <a class="brand" href="#inicio" aria-label="Taberna Ventura, inicio"><img src="img/logo-circular.png" width="32" height="32" alt=""><span>Taberna Ventura</span></a>
+    <a class="nav-link" href="#contacto">Contacto</a>
+  </div>
+</header>
+
+<div class="page">
+<div class="descent">
+  <div class="chain-track" aria-hidden="true"></div>
+
+  <!-- A/B · Hero: la superficie -->
+  <section class="hero" id="inicio">
+    <div class="hero__sky" aria-hidden="true"></div>
+    <div class="waves" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="hero__top container">
+      <p class="kicker">Bienvenidos a bordo</p>
+      <h1>Taberna Ventura</h1>
+    </div>
+    <div class="hero__water container">
+      <p class="hero__lema" data-cfg="lema">Cocina de taberna para compartir, con el mar de fondo.</p>
+      <a class="btn btn--gold" href="carta/">Ver la carta</a>
+    </div>
+  </section>
+
+  <!-- C · Presentación -->
+  <section class="section" id="restaurante">
+    <div class="container about reveal">
+      <p class="kicker">El restaurante</p>
+      <h2>Una taberna de las de siempre</h2>
+      <div id="about-text">
+        <p>Taberna Ventura es un sitio cercano y sin pretensiones: de los de sentarse a gusto, pedir para compartir y quedarse un rato.</p>
+        <p>Tienes sala y terraza, y una carta pensada para cualquier momento del día.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- F · Contacto y ubicación (se rellena desde js/config.js) -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="reveal">
+        <p class="kicker">Contacto</p>
+        <h2>Ven a vernos</h2>
+      </div>
+      <div class="contact reveal" id="contact-grid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- G · Fondo marino y cierre -->
+<footer class="abyss">
+  <svg class="abyss__curve" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M4 0C4 58 50 36 50 100" stroke="#c9d9df" stroke-width="6" stroke-dasharray="12 9"/>
+    <path d="M4 0C4 58 50 36 50 100" stroke="#98b3be" stroke-width="3" stroke-dasharray="9 12" stroke-dashoffset="-10"/>
+  </svg>
+  <div class="medal">
+    <svg class="shackle" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="9" fill="none" stroke="#E4C06B" stroke-width="4"/></svg>
+    <img src="img/logo-circular.png" width="136" height="136" loading="lazy" alt="Logotipo de Taberna Ventura: ancla dentro de un círculo">
+  </div>
+  <div class="foot">
+    <p>Taberna Ventura</p>
+    <small>© <span id="year">2026</span> Taberna Ventura</small>
+  </div>
+  <svg class="seabed" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs><linearGradient id="rk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17476a"/><stop offset="1" stop-color="#071b2e"/></linearGradient></defs>
+    <path fill="url(#rk)" d="M0 260V165Q60 115 130 148T250 138Q300 105 360 158T470 195L520 260Z"/>
+    <path fill="url(#rk)" d="M1200 260V150Q1130 98 1050 140T930 148Q880 118 820 175T720 205L690 260Z"/>
+    <path fill="#06182a" d="M0 260V218Q150 196 300 221T600 216T900 223T1200 211V260Z"/>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="#b9776d" stroke-width="9" d="M430 232V176M430 205L402 170M430 192L458 158M402 170V148M458 158V136M402 170L388 156"/>
+      <path stroke="#b9a06a" stroke-width="8" d="M560 230V186M560 206L538 176M560 200L584 170M538 176L530 154M584 170L594 148M560 186V160"/>
+      <path stroke="#5a9fa0" stroke-width="7" opacity=".85" d="M720 232V190M720 210L744 180M720 200L698 172M744 180V156M698 172V150M720 190V166"/>
+      <path stroke="#b9776d" stroke-width="8" d="M820 232V184M820 208L846 176M846 176V152M820 196L800 166"/>
+      <path stroke="#b9a06a" stroke-width="8" d="M190 236V190M190 212L168 182M190 204L214 174M168 182V158M214 174V150"/>
+      <path stroke="#5a9fa0" stroke-width="7" opacity=".85" d="M1010 236V192M1010 214L988 186M1010 204L1034 176M1034 176V154"/>
+      <path stroke="#3f7f77" stroke-width="6" d="M480 234Q468 204 480 172"/>
+      <path stroke="#3f7f77" stroke-width="6" d="M495 236Q510 206 498 180"/>
+      <path stroke="#3f7f77" stroke-width="6" d="M652 236Q640 208 654 178"/>
+      <path stroke="#3f7f77" stroke-width="6" d="M880 236Q870 210 884 184"/>
+      <path stroke="#3f7f77" stroke-width="6" d="M300 238Q290 212 302 188"/>
+    </g>
+    <ellipse cx="632" cy="232" rx="34" ry="20" fill="#a05a68"/>
+    <g fill="#d4a9b0" opacity=".7"><circle cx="620" cy="226" r="3"/><circle cx="634" cy="222" r="3"/><circle cx="646" cy="228" r="3"/><circle cx="628" cy="236" r="3"/></g>
+    <path fill="#0d3350" d="M500 246Q520 212 560 222Q590 228 600 248Z"/>
+    <path fill="#0d3350" d="M860 248Q880 218 920 226Q950 232 960 248Z"/>
+  </svg>
+</footer>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/sea.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
