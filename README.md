@@ -28,9 +28,8 @@ Opcional: `lema`, `presentacion` (textos provisionales) y `urlCarta` (enlace a c
 Sube la foto a `img/platos/` y añade al plato `imagen: 'img/platos/mi-foto.jpg'` (opcional `imagenGrande`, `imagenAlt`).
 Sin `imagen` el plato se muestra solo con texto. Al pulsar la foto se abre ampliada (Escape, clic fuera o «Cerrar»). Recomendado: ~320 px de ancho, JPG/WebP.
 
-## Carta: qué se ha omitido (alcohol)
-Secciones Cervezas, Vinos y Cocktel; en Café: bombón con coña y carajillos; en Temporal: cubadas y Nordes martimiller.
-Todo lo demás conserva nombres, descripciones, precios y alérgenos del HTML original.
+## Alcohol
+`data/carta-alcohol.js` añade Cervezas, Vinos y Cocktel y restaura los carajillos, el bombón con coña, las cubadas y el Nordes martimiller. Para ocultarlo otra vez, quita su etiqueta `<script>` en `carta/index.html`.
 
 ## Lista de comprobación tras publicar
 - [ ] Inicio y `/carta/` cargan; logotipo y foto se ven; la foto se amplía al pulsarla.
