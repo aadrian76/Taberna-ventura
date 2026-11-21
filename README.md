@@ -1,40 +1,27 @@
-# Taberna Ventura · web estática (HTML + CSS + JS, sin dependencias)
+# Taberna Ventura — web estática
+
+HTML + CSS + JavaScript sin dependencias ni compilación. Solo carga tipografías de Google Fonts (Instrument Serif y Hanken Grotesk).
 
 ## Estructura
 ```
-index.html          Página principal (superficie → fondo marino, cadena y logotipo)
-carta/index.html    Carta digital (subpágina independiente: /carta/)
-css/sea.css         Escena submarina, cabecera, botones y visor de fotos (compartido)
-css/home.css        Estilos del inicio     |  css/carta.css  Estilos de la carta
-js/config.js        ★ Teléfono, dirección, Maps, Instagram, horarios, textos
-js/sea.js           Capa submarina (luz, cáusticas, peces), profundidad y cadena
-js/lightbox.js      Visor de fotografías (cualquier elemento con data-big)
-js/home.js          Contacto del inicio   |  js/carta.js  Buscador, alérgenos, tarifa, compartir
-data/carta.js       ★ Platos, precios y alérgenos
-img/                Logotipo, favicon, foto del plato; img/platos/ = miniaturas de la carta
+index.html            Página principal
+carta.html            Carta digital
+assets/css/styles.css Estilos de las dos páginas
+assets/js/config.js   ← Teléfono, Instagram, Maps, horarios, platos de portada
+assets/js/carta-data.js ← Platos, precios y alérgenos (un plato por línea)
+assets/js/site.js     Cabecera, contacto, portada
+assets/js/carta.js    Buscador, filtros, selector de precios, lightbox
+assets/img/           Logotipos (y aquí van las fotos)
 ```
 
-## Despliegue en Hostinger
-1. hPanel → Sitios web → tu dominio → **Administrador de archivos** (o FTP).
-2. Abre `public_html` y sube **el contenido** de esta carpeta (no la carpeta en sí): `index.html`, `carta/`, `css/`, `js/`, `data/`, `img/`.
-3. Visita `https://tudominio.com/` y `https://tudominio.com/carta/`.
-4. Código QR: apúntalo a `https://tudominio.com/carta/`.
+## Publicar en Hostinger
+1. hPanel → Sitios web → tu dominio → **Administrador de archivos**.
+2. Entra en `public_html` y sube el contenido de la carpeta (no la carpeta en sí): `index.html`, `carta.html` y `assets/`.
+3. Abre tu dominio y comprueba `/carta.html`.
 
-## Datos de contacto (js/config.js)
-Teléfono, enlace tel:, Google Maps, Instagram y horarios ya están cargados. `direccion` está vacía a propósito (solo se usa el enlace oficial de Maps). Lo que se deje vacío no se muestra.
-Opcional: `lema`, `presentacion` (textos provisionales) y `urlCarta` (enlace a compartir).
-
-## Añadir fotos a platos (data/carta.js)
-Sube la foto a `img/platos/` y añade al plato `imagen: 'img/platos/mi-foto.jpg'` (opcional `imagenGrande`, `imagenAlt`).
-Sin `imagen` el plato se muestra solo con texto. Al pulsar la foto se abre ampliada (Escape, clic fuera o «Cerrar»). Recomendado: ~320 px de ancho, JPG/WebP.
-
-## Alcohol
-`data/carta-alcohol.js` añade Cervezas, Vinos y Cocktel y restaura los carajillos, el bombón con coña, las cubadas y el Nordes martimiller. Para ocultarlo otra vez, quita su etiqueta `<script>` en `carta/index.html`.
-
-## Lista de comprobación tras publicar
-- [ ] Inicio y `/carta/` cargan; logotipo y foto se ven; la foto se amplía al pulsarla.
-- [ ] Carta: arranca en «Sala + Terraza»; «Solo Sala» y «Solo Terraza» (panel «Precios y alérgenos») cambian al instante.
-- [ ] Buscador (icono de lupa), filtros de alérgenos y «Quitar filtros».
-- [ ] Barra de categorías con resaltado al desplazarse; «Compartir» (menú nativo en móvil, copia el enlace en ordenador).
-- [ ] `tel:+34919357618`, Google Maps e Instagram abren bien; horarios correctos.
-- [ ] Probado a 320, 360, 390 y 430 px, y con «reducir movimiento» activado.
+## Qué se edita y dónde
+- **Contacto y horarios:** `assets/js/config.js` (se actualizan en cabecera, contacto y pie).
+- **Carta:** `assets/js/carta-data.js`. Campos: `nombre`, `desc`, `alergenos`, `sala`, `terraza`.
+- **Añadir foto a un plato:** sube la imagen a `assets/img/` y añade `foto:"assets/img/burrata.jpg"` a ese plato. Aparece en la carta (se amplía al pulsarla) y, si es el primero de `destacados`, en la portada con tratamiento destacado.
+- **Foto del local:** `fotos.local.src` en `config.js`.
+- Mantén las fotos por debajo de ~300 KB (JPG o WebP, ancho 1600 px).

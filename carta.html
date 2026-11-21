@@ -1,0 +1,21 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Carta · Taberna Ventura</title><meta name="description" content="Carta digital de Taberna Ventura con precios de sala y de terraza y alérgenos.">
+<link rel="icon" href="assets/img/logo.png"><meta name="theme-color" content="#111111"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Instrument+Serif:ital@0;1&display=swap"><link rel="stylesheet" href="assets/css/styles.css"></head><body class="carta-page">
+<header class="top"><div class="wrap">
+<a class="marca" href="index.html"><img src="assets/img/logo-blanco.png" alt="" width="38" height="38"><span>Taberna Ventura</span></a>
+<a class="pill mov" href="carta.html">Carta</a>
+<button class="burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="nav"></button>
+<nav class="nav" id="nav" aria-label="Principal"><a href="index.html">Inicio</a><a href="index.html#restaurante">El restaurante</a><a class="de" href="carta.html">Carta</a><a href="index.html#contacto">Contacto</a></nav>
+</div></header>
+<div class="cab wrap"><h1>Carta</h1><p class="aviso">Ante cualquier alergia o intolerancia, consúltalo con el personal antes de pedir. Los alérgenos que aparecen son los indicados en la carta.</p></div>
+<div class="barra"><div class="wrap">
+<div class="fila"><input class="buscar" id="buscar" type="search" placeholder="Buscar en la carta" aria-label="Buscar en la carta" autocomplete="off"><button class="op" id="btnAl" aria-expanded="false" aria-controls="panelAl">Alérgenos</button></div>
+<div class="sel" role="group" aria-label="Precios"><button class="op" data-modo="ambos" aria-pressed="true">Sala + Terraza</button><button class="op" data-modo="sala" aria-pressed="false">Solo Sala</button><button class="op" data-modo="terraza" aria-pressed="false">Solo Terraza</button></div>
+<div class="panel" id="panelAl" hidden><p>Marca un alérgeno para ocultar los platos que lo contienen.</p><div class="chips" id="chips"></div><button class="op" id="resetAl">Restablecer filtros</button><p class="aviso">Ante cualquier alergia, pregunta al personal.</p></div>
+<nav class="cats" id="cats" aria-label="Categorías de la carta"></nav></div></div>
+<main id="carta" class="modo-ambos"><noscript><p class="wrap">La carta necesita JavaScript. Llámanos al 919 35 76 18.</p></noscript></main>
+<div class="vacio wrap" id="vacio" hidden><p>No hay platos con esa búsqueda.</p><button class="btn osc" id="resetVacio">Restablecer filtros</button></div>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Fotografía ampliada"><button aria-label="Cerrar">×</button><img alt=""></div>
+<footer class="pie"><div class="wrap"><div class="pie-m"><img src="assets/img/logo-blanco.png" alt="" width="72" height="72"><span>Taberna Ventura</span></div>
+<ul><li><a data-h="instagram.url" target="_blank" rel="noopener">Instagram</a></li><li><a data-h="telefono.enlace" data-t="telefono.texto"></a></li><li><a data-h="maps.url" target="_blank" rel="noopener">Ubicación</a></li><li><a href="carta.html">Carta</a></li></ul></div></footer>
+<script src="assets/js/config.js"></script><script src="assets/js/carta-data.js"></script><script src="assets/js/site.js"></script><script src="assets/js/carta.js"></script></body></html>
